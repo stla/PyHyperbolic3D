@@ -9,11 +9,10 @@ Python stuff for drawing 3D hyperbolic polyhedra.
 
 Tubular hyperbolic segment.
 
-Parameters
-----------
-- **`A,B`** `points (lists or arrays)
+##### Parameters
+- **`A,B`** points (lists or arrays)
 
-The two endpoints of the segment.
+  The two endpoints of the segment.
 
 - **`s`** positive float
 
@@ -27,20 +26,19 @@ The two endpoints of the segment.
 
    Number of points along the segment. The default is 300.
 
-Returns
--------
+##### Returns
 A PyVista mesh ready for inclusion in a plotting region.
 
+___
 
 #### `gyrotriangle(A, B, C, s, depth=5, tol=1e-6):`
 
 Hyperbolic triangle.
 
-Parameters
-----------
+##### Parameters
 - **`A,B`** points (lists or arrays)
 
-The vertices of the triangle.
+  The vertices of the triangle.
 
 - **`s`** positive float
 
@@ -55,8 +53,7 @@ The vertices of the triangle.
    The tolerance used to merge duplicated points in the mesh.
 The default is 1e-6.
 
-Returns
--------
+##### Returns
 A PyVista mesh ready for inclusion in a plotting region.
 
 
