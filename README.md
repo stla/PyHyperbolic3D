@@ -38,7 +38,7 @@ ___
 Hyperbolic triangle.
 
 ##### Parameters
-- **`A,B`** points (lists or arrays)
+- **`A,B,C`** points (lists or arrays)
 
   The vertices of the triangle.
 

@@ -87,7 +87,7 @@ def gyrotriangle(A, B, C, s, depth=5, tol=1e-6):
 
     Parameters
     ----------
-    A,B : points (lists or arrays)
+    A,B,C : points (lists or arrays)
         The vertices of the triangle.
     s : positive float
         Curvature parameter.
