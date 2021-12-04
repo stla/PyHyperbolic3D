@@ -164,12 +164,12 @@ s     = 1
 r     = 0.04
 depth = 5
 
-for i, matrix in enumerate(matrices):
-    pl = pv.Plotter(window_size=[512,512], off_screen=True)
+for i, matrix in enumerate(matrices[:3]):
+    pl = pv.Plotter(window_size=[512,512])#, off_screen=True)
     pl.set_background("#363940")
     for light in pl.renderer.lights:
         light.transform_matrix = matrix
-        light.position = matrix[0:3, 0:3].dot(np.asarray(light.position))
+        #light.position = matrix[0:3, 0:3].dot(np.asarray(light.position))
     for vertex in vertices:
         V = pv.Sphere(2 * r, center=vertex)
         pl.add_mesh(V, smooth_shading=True, color="navy")
@@ -188,8 +188,8 @@ for i, matrix in enumerate(matrices):
     pl.set_position((15, 15, 15))
     pl.camera.model_transform_matrix = matrix
     pngname = "pngs/pic%03d.png" % i
-    pl.show(screenshot=pngname)
+    pl.show()#screenshot=pngname)
 
-os.system(
-    "magick convert -dispose previous -loop 0 -delay 8 pngs/pic*.png BarthHyperbolicpolyhedron.gif"    
-)
+# os.system(
+#     "magick convert -dispose previous -loop 0 -delay 8 pngs/pic*.png BarthHyperbolicpolyhedron.gif"    
+# )
