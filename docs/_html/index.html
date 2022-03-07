@@ -46,6 +46,32 @@
 </ul>
 <p><span class="raw-html"><br /></span></p>
 <span class="target" id="module-gyro"></span><dl class="py function">
+<dt class="sig sig-object py" id="gyro.changesOfSign">
+<span class="sig-prename descclassname"><span class="pre">gyro.</span></span><span class="sig-name descname"><span class="pre">changesOfSign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gyro.changesOfSign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sometimes, the coordinates of the vertices of a polyhedron are given with changes of sign (with a symbol +/-). This function performs the changes of sign.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mat</strong> (<em>array</em>) – The matrix for which the changes of sign will be applied.</p></li>
+<li><p><strong>cols</strong> (<em>integer list</em>) – The indices of the columns for which the changes of sign are desired. The default, <cite>None</cite>, to select all columns.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A numpy array with the same number of columns as <cite>mat</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gyro.expandgrid">
+<span class="sig-prename descclassname"><span class="pre">gyro.</span></span><span class="sig-name descname"><span class="pre">expandgrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">itrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gyro.expandgrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cartesian product. Reversion is for compatibility with R.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="gyro.gyrotriangle">
 <span class="sig-prename descclassname"><span class="pre">gyro.</span></span><span class="sig-name descname"><span class="pre">gyrotriangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gyro.gyrotriangle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hyperbolic triangle.</p>

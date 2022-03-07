@@ -2,6 +2,48 @@
 import math
 import numpy as np
 import pyvista as pv
+import itertools
+
+
+def expandgrid(*itrs): # https://stackoverflow.com/a/12131385/1100107
+    """
+    Cartesian product. Reversion is for compatibility with R.
+    
+    """
+    product = list(itertools.product(*reversed(itrs)))
+    return [[x[i] for x in product] for i in range(len(itrs))][::-1]
+
+def changesOfSign(mat, cols=None):
+    """
+    Sometimes, the coordinates of the vertices of a polyhedron are given with changes of sign (with a symbol +/-). This function performs the changes of sign.
+
+    Parameters
+    ----------
+    mat : array
+         The matrix for which the changes of sign will be applied.
+    cols : integer list
+           The indices of the columns for which the changes of sign are desired. The default, `None`, to select all columns. 
+
+    Returns
+    -------
+    array
+        A numpy array with the same number of columns as `mat`.
+
+    """
+    def f(r):
+        return (
+            [[x] if (x==0 or i not in cols) else [-x,x] 
+             for i,x in enumerate(r)]
+        )
+    def g(r):
+        return (
+            [[0] if x==0 else [-x,x] for x in r]
+        )
+    h = g if cols is None else f
+    lists = [h(r) for r in mat]
+    mats = [np.transpose(expandgrid(*l)) for l in lists]
+    return np.vstack(tuple(mats))
+
 
 
 def opposite(A):
