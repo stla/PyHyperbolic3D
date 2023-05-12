@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "Hyperbolic3D"
+name = "PyHyperbolic3D"
 packages = [
     { include = "hyperbolic3d" },
 ]
