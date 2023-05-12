@@ -1,6 +1,14 @@
 # PyHyperbolic3D
 
-Python stuff for drawing 3D hyperbolic polyhedra.
+<!-- badges: start -->
+[![Documentation status](https://readthedocs.org/projects/pyhyperbolic3d/badge/)](http://pyhyperbolic3d.readthedocs.io)
+<!-- badges: end -->
+
+Python stuff for drawing 3D hyperbolic polyhedra with 'PyVista'.
+
+```
+pip install pyhyperbolic3d
+```
 
 ![](https://github.com/stla/PyHyperbolic3D/raw/main/examples/icosahedron.png)
 

@@ -1,14 +1,28 @@
 [tool.poetry]
-name = "hyperbolic3d"
+name = "PyHyperbolic3D"
+packages = [
+    { include = "hyperbolic3d" },
+]
 version = "0.1.0"
-description = ""
+description = "Hyperbolic meshes for 'PyVista'"
+homepage = "https://github.com/stla/PyHyperbolic3D"
 authors = ["Stéphane Laurent <laurent_step@outook.fr>"]
+documentation = "https://pyhyperbolic3d.readthedocs.io/en/latest/"
+keywords = ["hyperbolic geometry", "3D meshes", "PyVista"]
 license = "GPL-3.0-only"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
 numpy = "^1.21.2"
 pyvista = "^0.32.1"
+sphinx = { version = "^5.3.0", optional = true }
+sphinx-rtd-theme = { version = "^1.1.1", optional = true }
+sphinxcontrib-napoleon = { version = "^0.7", optional = true }
+sphinxcontrib-restbuilder = { version = "^0.3", optional = true }
+
+[tool.poetry.extras]
+docs = ["Sphinx", "sphinx-rtd-theme", "sphinxcontrib-napoleon", "sphinxcontrib-restbuilder"]
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
