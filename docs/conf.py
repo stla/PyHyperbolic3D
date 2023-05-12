@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath("../"))
 
 # -- Project information -----------------------------------------------------
 
-project = 'pyhyperbolic3d'
+project = 'hyperbolic3d'
 copyright = '2021, Stéphane Laurent'
 author = 'Stéphane Laurent'
 
