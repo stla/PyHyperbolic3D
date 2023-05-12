@@ -25,5 +25,5 @@ Indices and tables
 
 :raw-html:`<br />`
 	
-.. automodule:: gyro
+.. automodule:: hyperbolic3d.gyro
    :members:
